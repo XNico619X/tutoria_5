@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Inventario de Productos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            padding: 20px
+        }
+
+        .wrap {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08)
+        }
+
+        h2 {
+            margin-top: 0
+        }
+
+        form {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 16px
+        }
+
+        input,
+        button {
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 14px
+        }
+
+        input[type=number] {
+            width: 120px
+        }
+
+        button {
+            background: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 12px
+        }
+
+        th,
+        td {
+            padding: 8px;
+            border-bottom: 1px solid #eee;
+            text-align: left
+        }
+
+        .actions button {
+            margin-right: 6px;
+            background: #28a745
+        }
+
+        .actions button.delete {
+            background: #dc3545
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <h2>Inventario de Productos</h2>
+
+        <form id="formCrear">
+            <input type="text" id="nombre" placeholder="Nombre" required>
+            <input type="number" id="precio" placeholder="Precio" step="0.01" required>
+            <input type="number" id="cantidad" placeholder="Cantidad" required>
+            <button type="submit">Crear</button>
+            <button type="button" id="btnListar">Listar</button>
+        </form>
+
+        <h3>Productos</h3>
+        <div id="lista"></div>
+
+        <h3>Editar producto</h3>
+        <form id="formEditar">
+            <input type="number" id="editarId" placeholder="ID" required>
+            <input type="text" id="editarNombre" placeholder="Nombre">
+            <input type="number" id="editarPrecio" placeholder="Precio" step="0.01">
+            <input type="number" id="editarCantidad" placeholder="Cantidad">
+            <button type="submit">Actualizar</button>
+        </form>
+
+        <h3>Eliminar producto</h3>
+        <form id="formEliminar">
+            <input type="number" id="eliminarId" placeholder="ID a eliminar" required>
+            <button type="submit">Eliminar</button>
+        </form>
+
+        <p id="mensaje"></p>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
