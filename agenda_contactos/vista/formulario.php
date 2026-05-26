@@ -12,7 +12,7 @@
 </head>
 <body>
     <h2>Agregar Nuevo Contacto</h2>
-    <form action="../controladores/insertar.php" method="POST">
+    <form action="../controlador/insertar.php" method="POST">
         <input type="text" name="nombre" placeholder="Nombre completo" required>
         <input type="text" name="telefono" placeholder="Teléfono" required>
         <input type="text" name="direccion" placeholder="Dirección" required>
