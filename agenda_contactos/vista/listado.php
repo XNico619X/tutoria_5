@@ -1,4 +1,4 @@
-<?php require_once "../modelos/conexion.php"; ?>
+<?php require_once "../model/modelo.php"; ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -27,7 +27,7 @@
             echo "<p><strong>Teléfono:</strong> " . htmlspecialchars($c['telefono']) . "</p>";
             echo "<p><strong>Dirección:</strong> " . htmlspecialchars($c['direccion']) . "</p>";
             echo "<p><strong>Correo:</strong> " . htmlspecialchars($c['correo']) . "</p>";
-            echo "<a href='../controladores/eliminar.php?id=" . $c['id'] . "' class='btn-eliminar' onclick='return confirm(\"¿Seguro que deseas eliminar este contacto?\")'>Eliminar</a>";
+            echo "<a href='../controlador/eliminar.php?id=" . $c['id'] . "' class='btn-eliminar' onclick='return confirm(\"¿Seguro que deseas eliminar este contacto?\")'>Eliminar</a>";
             echo "</div>";
         }
         ?>

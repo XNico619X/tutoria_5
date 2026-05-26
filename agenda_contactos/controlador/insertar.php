@@ -1,5 +1,5 @@
 <?php
-require_once "../modelos/conexion.php";
+require_once "../model/modelo.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Recibir datos
@@ -17,8 +17,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bindParam(":correo", $correo);
 
     if ($stmt->execute()) {
-        // El Controlador redirige a la Vista de listado [cite: 29]
-        header("Location: ../vistas/listado.php");
+        // El Controlador redirige a la Vista de listado
+        header("Location: ../vista/listado.php");
         exit();
     } else {
         echo "Error al guardar el contacto.";

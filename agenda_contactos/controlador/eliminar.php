@@ -1,5 +1,5 @@
 <?php
-require_once "../modelos/conexion.php";
+require_once "../model/modelo.php";
 
 if (isset($_GET["id"])) {
     $id = $_GET["id"];
@@ -8,7 +8,7 @@ if (isset($_GET["id"])) {
     $stmt->bindParam(":id", $id);
     
     if ($stmt->execute()) {
-        header("Location: ../vistas/listado.php");
+        header("Location: ../vista/listado.php");
         exit();
     } else {
         echo "Error al eliminar.";
