@@ -1,0 +1,10 @@
+CREATE DATABASE foro_comentarios;
+
+USE foro_comentarios;
+
+CREATE TABLE comentarios (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  usuario VARCHAR(100) NOT NULL,
+  mensaje TEXT NOT NULL,
+  fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
